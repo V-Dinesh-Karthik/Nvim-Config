@@ -11,18 +11,20 @@ return require('packer').startup(function(use)
   }
 
 
-  use { "catppuccin/nvim", as = "catppuccin",
+  use({ "catppuccin/nvim", as = "catppuccin",
   config = function()
 	  require('catppuccin').setup({
 		  flavour = "mocha",
 	  })
 	  vim.cmd [[colorscheme catppuccin]]
   end
-  }       
-  use {
+  })
+
+  use ({
 	  'nvim-treesitter/nvim-treesitter',
-	  {run = ':TSUpdate'}
-  }
+	  {run = ':TSUpdate'},
+  })
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
@@ -48,6 +50,20 @@ return require('packer').startup(function(use)
  use 'mbbill/undotree'
 
  use 'tpope/vim-fugitive'
+
+ use {
+     'nvim-tree/nvim-tree.lua',
+     requires = {
+         'nvim-tree/nvim-web-devicons', -- optional
+     },
+ }
+
+
+ use 'anuvyklack/hydra.nvim' 
+
+ use 'feline-nvim/feline.nvim'
+
+
 
 
 end)
