@@ -1,8 +1,16 @@
 TODO : 
-1. Add ToggleTerm plugin + keymaps
+-1-. Add ToggleTerm plugin + keymaps
 2. GitSigns plugin
-3. Autopairs 
+3. -Autopairs-, AutoTag
 4. nvim-dap 
 5. window resize & split plugin
-6. maybe bufferline.
+-6-. maybe bufferline.
+7. Null-ls
+Languages that should work :
+-python- 
+-c++-
+-c-
+-java-
+-javascript-
+-dart/flutter- (Have to setup few keymaps)
 

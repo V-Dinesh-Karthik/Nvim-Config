@@ -59,11 +59,31 @@ return require('packer').startup(function(use)
  }
 
 
- use 'anuvyklack/hydra.nvim' 
+ use 'anuvyklack/hydra.nvim'
 
  use 'feline-nvim/feline.nvim'
 
+ use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+     require("toggleterm").setup()
+ end}
 
+ use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
+ use {
+     'lewis6991/gitsigns.nvim',
+     config = function()
+         require('gitsigns').setup()
+     end
+ }
+ use "lukas-reineke/indent-blankline.nvim" 
+
+ use "onsails/lspkind.nvim"
+
+ use 'mfussenegger/nvim-jdtls' 
+
+ use {
+     "windwp/nvim-autopairs",
+     config = function() require("nvim-autopairs").setup {} end
+ }
 
 end)

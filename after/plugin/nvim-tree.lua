@@ -1,5 +1,4 @@
 local lib = require("nvim-tree.lib")
-local view = require("nvim-tree.view")
 
 local git_add = function()
   local node = lib.get_node_at_cursor()
@@ -25,7 +24,7 @@ local WIDTH_RATIO = 0.5   -- You can change this too
 
 require('nvim-tree').setup({
     view = {
-        mappings = {
+      mappings = {
             list = {
                 {key="ga", action="git_add", action_cb=git_add},
             }
@@ -58,3 +57,5 @@ require('nvim-tree').setup({
     end,
   },
 })
+
+
